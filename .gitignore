@@ -1,1 +1,7 @@
-.sass-cache
+# File Ignores
+.idea/
+.DS_STORE
+node_modules
+bower_components
+dist
+files/lib/bower

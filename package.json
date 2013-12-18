@@ -1,0 +1,21 @@
+{
+  "name": "handlebars-on-express-template",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "3.4.5",
+    "consolidate": "*",
+    "handlebars": "*"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-bower-task": "~0.3.4",
+    "grunt-exec": "~0.4.0",
+    "grunt-nodemon": "~0.1.2",
+    "grunt-contrib-jshint": "~0.6.4",
+    "grunt-contrib-requirejs": "~0.4.1"
+  }
+}

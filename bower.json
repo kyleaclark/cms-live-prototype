@@ -1,0 +1,9 @@
+{
+  "name": "handlebars-on-express-template",
+  "version": "0.0.1",
+  "dependencies": {
+    "jquery": "1.10.x",
+    "requirejs": "2.1.9",
+    "html5shiv": "*"
+  }
+}
