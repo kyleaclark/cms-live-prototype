@@ -17,6 +17,8 @@ Created as a personal application.  The application is a prototype for a live-ed
 
 Install Express dependencies [Node via nodejs.org] - refer to http://expressjs.com/guide.html.
 
+Install MongoDB dependencies [compatible version to v2.4.8 utilized in development of cms-live-prototype] - http://docs.mongodb.org/manual/installation/
+
 Install Grunt depdencies [npm install -g grunt-cli] - refer to http://gruntjs.com/getting-started.
 
 Install Bower dependencies [npm install -g bower, Git via http://git-scm.com] - refer to http://bower.io/.
@@ -33,8 +35,8 @@ Run "grunt build" from repo directory to install project dependencies from bower
 
 ##Run
 
-Run "grunt run" from repo directory and follow console instructions to open default localhost:3000 port to view site.
+Run "mongod" in a separate instance in order to execute cms-live-prototype program - [refer to http://docs.mongodb.org/manual/tutorial/manage-mongodb-processes/]
 
-Run "grunt watch" from repo directory to file watch and follow console instructions to open default localhost:3000 port to view site. (Recommended for development)
+Run "grunt serve" from repo directory to file watch and follow console instructions to open default localhost:3000 port to view site. (Recommended for development)
 
 Run "grunt dist" from repo directory to jshint, compile js and css into disbrution-ready, minified code, and file watch by following console instructions to open default localhost:3000 port to view site. (Recommended for production disbrution)
