@@ -1,5 +1,5 @@
 {
-  "name": "handlebars-on-express-template",
+  "name": "cms-live-prototype",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -8,7 +8,8 @@
   "dependencies": {
     "express": "3.4.5",
     "consolidate": "*",
-    "handlebars": "*"
+    "handlebars": "*",
+    "mongoose": "~3.8.3"
   },
   "devDependencies": {
     "grunt": "~0.4.2",

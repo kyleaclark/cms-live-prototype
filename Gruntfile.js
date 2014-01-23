@@ -68,10 +68,6 @@ module.exports = function (grunt) {
 
     exec: {
 
-      run: {
-        cmd: 'node app.js'
-      },
-
       test: {
         cmd: 'jshint'
       }
@@ -87,8 +83,7 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-requirejs');
 
   grunt.registerTask('build', ['bower:install']);
-  grunt.registerTask('run', ['exec:run']);
-  grunt.registerTask('watch', ['nodemon:dev']);
+  grunt.registerTask('serve', ['nodemon:dev']);
   grunt.registerTask('dist', ['jshint', 'requirejs:compileJs', 'requirejs:compileCss', 'nodemon:dist']);
   grunt.registerTask('test', ['jshint']);
 };

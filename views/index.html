@@ -1,5 +1,14 @@
 {{> layoutHeader}}
 
-<h1>{{ title }}</h1>
+  <a href="#" class="del-btn" data-content="create">Click to add new content</a>
+
+  {{#each contents}}
+    <div class="item">
+      <a contenteditable data-name="{{this._id}}" id="hello">{{this.content}}</a>
+      <a class="del-btn" href="/api/destroy/{{this._id}}">Delete</a>
+    </div>
+  {{/each}}
+	
+  <div id="debug"></div>
 
 {{> layoutFooter}}

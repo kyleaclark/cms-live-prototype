@@ -1,9 +1,11 @@
 define([
-  "jquery"
-], function ($) {
+  "jquery",
+  "js/components/Content"
+], function ($, Content) {
   "use strict";
 
-  console.log("init main");
-  console.log($);
+  var content = new Content();
+
+  //content.fetchContents();
 
 });
