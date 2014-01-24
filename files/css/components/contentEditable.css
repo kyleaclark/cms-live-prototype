@@ -1,3 +1,21 @@
+body {
+	font-size: 18px;
+	font-family: "Helvetica", Arial, sans-serif;
+}
+
+a {
+  color: #003663;
+}
+
+.del-btn {
+	color: #7A0026;
+}
+
+div {
+	color: #005B7F;
+	padding: 5px 0;
+}
+
 [contenteditable]:hover:after {
   content: ' click to edit';
   font-style: italic;
