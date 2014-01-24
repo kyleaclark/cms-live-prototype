@@ -5,7 +5,4 @@ define([
   "use strict";
 
   var content = new Content();
-
-  //content.fetchContents();
-
 });

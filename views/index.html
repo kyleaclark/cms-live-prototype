@@ -2,9 +2,11 @@
 
   <a href="#" class="del-btn" data-content="create">Click to add new content</a>
 
+  <p>Press tab to save content edits</p>
+
   {{#each contents}}
     <div class="item">
-      <a contenteditable data-name="{{this._id}}" id="hello">{{this.content}}</a>
+      <div contenteditable data-name="{{this._id}}" id="hello">{{this.content}}</div>
       <a class="del-btn" href="/api/destroy/{{this._id}}">Delete</a>
     </div>
   {{/each}}

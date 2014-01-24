@@ -11,11 +11,11 @@ define([
   /* Accessors and Mutators */
 
   Content.prototype = {
-    getContentUpdate: function () {
-      return this.contentUpdate;
+    getContentUpdateObj: function () {
+      return this.contentUpdateObj;
     },
-    setContentUpdate: function (value) {
-      this.contentUpdate = value;
+    setContentUpdateObj: function (value) {
+      this.contentUpdateObj = {content: value};
     }
   };
 
@@ -43,7 +43,6 @@ define([
     CallsUtil.fetchDeferred(fetchCall, successCallback);
 
     function successCallback(data, status, xhr) {
-      console.log(data);
       self.contentsData = data;
     };
   };
@@ -69,23 +68,24 @@ define([
 
   Content.prototype.edit = function (event) {
     var 
-      esc = event.which == 27,
-      nl = event.which == 13,
+      esc = event.which == 27, //esc
+      tab = event.which == 9, //tab
       el = event.target,
+      content = el.innerHTML,
       input = el.nodeName != 'INPUT' && el.nodeName != 'TEXTAREA';
 
     if (input) {
       if (esc) {
         document.execCommand('undo');
         el.blur();
-      } else if (nl) {
+      } else if (tab) {
 
-        this.setContentUpdate(el.innerHTML);
+        this.setContentUpdateObj(el.innerHTML);
 
         this.update(el);
 
         el.blur();
-        event.preventDefault();
+        event.preventDefault(); 
       }
     }
   }
@@ -93,10 +93,7 @@ define([
   Content.prototype.update = function (el) {
     var 
       postUrl = "/api/update/" + $(el).attr("data-name"),
-      postData = this.getContentUpdate();
-
-    console.log(postUrl);
-    console.log(postData);
+      postData = this.getContentUpdateObj();
 
     CallsUtil.fetchPost(postUrl, postData);
   };

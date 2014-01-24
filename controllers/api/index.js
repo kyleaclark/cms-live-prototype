@@ -21,7 +21,9 @@ exports.getContents = function (req, res) {
     .find(userIdObj)
     .sort(contentSortStr)
     .exec(function (err, contents) {
-      if (err) return next(err);
+      if (err) {
+        return next(err);
+      }
 
       res.send({
         contents : contents
@@ -45,8 +47,6 @@ exports.create = function (req, res, next) {
   };
 
   content = new Content(contentConfig);
-
-  console.log(content);
 
   content.save(function (err, content, count) {
     if (err) {
@@ -93,7 +93,7 @@ exports.update = function (req, res, next) {
       return utils.forbidden(res);
     }*/
 
-    content.content = req.body.title;
+    content.content = req.body.content;
     content.updateStamp = Date.now();
 
     content.save(function (err, content, count) {
