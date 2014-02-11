@@ -7,11 +7,33 @@ CMS Live Editing Prototype
 
 December 2013
 
-(last edit: December 2013)
+(last edit: January 2014)
 
 ##Overview
 
 Created as a personal application.  The application is a prototype for a live-editable CMS on the web.
+
+##Technologies
+
+JavaScript
+
+NodeJS
+
+ExpressJS
+
+Grunt
+
+Bower
+
+RequireJS
+
+jQuery
+
+Handlebars
+
+HTML5
+
+CSS
 
 ##Setup
 
