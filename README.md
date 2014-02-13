@@ -21,6 +21,10 @@ NodeJS
 
 ExpressJS
 
+MongoDB
+
+Mongoose
+
 Grunt
 
 Bower
